@@ -10,14 +10,12 @@
 <body>
 <script>
     const lang = navigator.language || navigator.userLanguage;
-    if (lang.startsWith('fr-CA')) {
+    const langs = navigator.languages;
+    if (lang.startsWith('fr-CA') || langs.includes('fr-CA') || langs.includes('fr')) {
         window.location.href = '/fr-CA';
-    } else if (lang.startsWith('en-CA')) {
-        window.location.href = '/en-CA';
     } else {
-        window.location.href = '/en';
+        window.location.href = '/en-CA';
     }
-    console.log(lang);
 </script>
 </body>
 </html>

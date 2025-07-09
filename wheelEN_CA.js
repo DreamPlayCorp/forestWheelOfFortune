@@ -1,4 +1,5 @@
 const canvas = document.getElementById("wheel");
+
 const ctx = canvas.getContext("2d");
 let width = canvas.width;
 let height = canvas.height;
@@ -95,7 +96,7 @@ function drawWheel() {
         ctx.fillStyle = grad;
         ctx.fill();
         ctx.strokeStyle = "#000";
-        // ctx.stroke();
+        ctx.stroke();
 
         if (!spinning && i === selectedIndex) {
             ctx.fillStyle = "rgba(255,255,255,0.1)";
